@@ -21,5 +21,16 @@
 			</array>
 		</dict>
 	</dict>
+	<key>AppDetails</key>
+	<dict>
+		<key>AppName</key>
+		<string>$(AD_APP_NAME)</string>
+		<key>Display</key>
+		<string>$(AD_DISPLAY)</string>
+	</dict>
+	<key>AppBaseURL</key>
+	<string>$(BASE_URL)</string>
+	<key>IsDebugMode</key>
+	<string>$(IS_DEBUG_MODE)</string>
 </dict>
 </plist>
