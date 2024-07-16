@@ -17,6 +17,7 @@
 		917559162C46E28E00D6853D /* DemoVIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917559152C46E28E00D6853D /* DemoVIPERUITests.swift */; };
 		917559182C46E28E00D6853D /* DemoVIPERUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917559172C46E28E00D6853D /* DemoVIPERUITestsLaunchTests.swift */; };
 		9175592A2C46E43200D6853D /* UIComponents in Resources */ = {isa = PBXBuildFile; fileRef = 917559292C46E43200D6853D /* UIComponents */; };
+		9175592C2C46E71800D6853D /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9175592B2C46E71700D6853D /* swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		917559272C46E3A700D6853D /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
 		917559282C46E42300D6853D /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 		917559292C46E43200D6853D /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIComponents; sourceTree = "<group>"; };
+		9175592B2C46E71700D6853D /* swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		917559252C46E30D00D6853D /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				9175592B2C46E71700D6853D /* swiftlint.yml */,
 				917559292C46E43200D6853D /* UIComponents */,
 				917559282C46E42300D6853D /* Networking */,
 				917559272C46E3A700D6853D /* Core */,
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9175592A2C46E43200D6853D /* UIComponents in Resources */,
+				9175592C2C46E71800D6853D /* swiftlint.yml in Resources */,
 				917558FE2C46E28E00D6853D /* Assets.xcassets in Resources */,
 				917559012C46E28E00D6853D /* Base in Resources */,
 				917558FC2C46E28D00D6853D /* Base in Resources */,
