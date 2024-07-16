@@ -85,6 +85,7 @@
 		917558E82C46E28D00D6853D = {
 			isa = PBXGroup;
 			children = (
+				9175592B2C46E71700D6853D /* swiftlint.yml */,
 				917559252C46E30D00D6853D /* Packages */,
 				917558F32C46E28D00D6853D /* DemoVIPER */,
 				9175590A2C46E28E00D6853D /* DemoVIPERTests */,
@@ -137,7 +138,6 @@
 		917559252C46E30D00D6853D /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				9175592B2C46E71700D6853D /* swiftlint.yml */,
 				917559292C46E43200D6853D /* UIComponents */,
 				917559282C46E42300D6853D /* Networking */,
 				917559272C46E3A700D6853D /* Core */,
