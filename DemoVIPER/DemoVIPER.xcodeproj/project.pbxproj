@@ -22,6 +22,10 @@
 		917559322C46F4B000D6853D /* DemoVIPER-Dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 917559302C46F4B000D6853D /* DemoVIPER-Dev.xcconfig */; };
 		917559352C46F5EF00D6853D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917559342C46F5EF00D6853D /* Environment.swift */; };
 		917559372C46F76200D6853D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917559362C46F76200D6853D /* AppConstants.swift */; };
+		917559402C47C09900D6853D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175593F2C47C09900D6853D /* Coordinator.swift */; };
+		917559422C47C0DB00D6853D /* UniversityModuleFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917559412C47C0DB00D6853D /* UniversityModuleFlow.swift */; };
+		917559452C47C3EE00D6853D /* Module_A in Frameworks */ = {isa = PBXBuildFile; productRef = 917559442C47C3EE00D6853D /* Module_A */; };
+		917559472C47C3F400D6853D /* Module_B in Frameworks */ = {isa = PBXBuildFile; productRef = 917559462C47C3F400D6853D /* Module_B */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,8 @@
 		917559362C46F76200D6853D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		9175593A2C46FEB600D6853D /* Module_A */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Module_A; sourceTree = "<group>"; };
 		9175593B2C46FECE00D6853D /* Module_B */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Module_B; sourceTree = "<group>"; };
+		9175593F2C47C09900D6853D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		917559412C47C0DB00D6853D /* UniversityModuleFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModuleFlow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917559452C47C3EE00D6853D /* Module_A in Frameworks */,
+				917559472C47C3F400D6853D /* Module_B in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +110,7 @@
 				9175590A2C46E28E00D6853D /* DemoVIPERTests */,
 				917559142C46E28E00D6853D /* DemoVIPERUITests */,
 				917558F22C46E28D00D6853D /* Products */,
+				917559432C47C3EE00D6853D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				9175593E2C479D0600D6853D /* Protocols */,
+				917559412C47C0DB00D6853D /* UniversityModuleFlow.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -199,8 +209,16 @@
 		9175593E2C479D0600D6853D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				9175593F2C47C09900D6853D /* Coordinator.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		917559432C47C3EE00D6853D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +237,10 @@
 			dependencies = (
 			);
 			name = DemoVIPER;
+			packageProductDependencies = (
+				917559442C47C3EE00D6853D /* Module_A */,
+				917559462C47C3F400D6853D /* Module_B */,
+			);
 			productName = DemoVIPER;
 			productReference = 917558F12C46E28D00D6853D /* DemoVIPER.app */;
 			productType = "com.apple.product-type.application";
@@ -340,6 +362,8 @@
 			files = (
 				917558F92C46E28D00D6853D /* ViewController.swift in Sources */,
 				917559352C46F5EF00D6853D /* Environment.swift in Sources */,
+				917559402C47C09900D6853D /* Coordinator.swift in Sources */,
+				917559422C47C0DB00D6853D /* UniversityModuleFlow.swift in Sources */,
 				917558F52C46E28D00D6853D /* AppDelegate.swift in Sources */,
 				917558F72C46E28D00D6853D /* SceneDelegate.swift in Sources */,
 				917559372C46F76200D6853D /* AppConstants.swift in Sources */,
@@ -687,6 +711,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		917559442C47C3EE00D6853D /* Module_A */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Module_A;
+		};
+		917559462C47C3F400D6853D /* Module_B */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Module_B;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 917558E92C46E28D00D6853D /* Project object */;
 }
