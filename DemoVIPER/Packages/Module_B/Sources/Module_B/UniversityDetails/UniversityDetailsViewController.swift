@@ -58,7 +58,8 @@ final class UniversityDetailsViewController: BaseViewController, UniversityDetai
     
     public lazy var btnRefresh: UIButton = UIButton().apply {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.imageView?.image = UIImage(systemName: "arrow.clockwise.circle.fill")
+        let image = UIImage(systemName: "arrow.clockwise.circle.fill")
+        $0.setImage(image, for: .normal)
         $0.tintColor = Color.Grey.grey70
         $0.withSize(.init(width: Dimension.size1_5, height: Dimension.size1_5))
         $0.addTarget(self, action: #selector(refreshButtonPressed), for: .touchUpInside)
@@ -66,9 +67,10 @@ final class UniversityDetailsViewController: BaseViewController, UniversityDetai
     
     public lazy var btnClose: UIButton = UIButton().apply {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.imageView?.image = UIImage(systemName: "xmark.circle.fill")
+        let image = UIImage(systemName: "xmark.circle.fill")
+        $0.setImage(image, for: .normal)
         $0.withSize(.init(width: Dimension.size1_5, height: Dimension.size1_5))
-        $0.addTarget(self, action: #selector(refreshButtonPressed), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
         $0.tintColor = Color.Grey.grey70
     }
     
