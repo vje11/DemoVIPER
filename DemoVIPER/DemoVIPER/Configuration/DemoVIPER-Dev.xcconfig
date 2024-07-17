@@ -1,0 +1,13 @@
+//
+//  DemoVIPER-Dev.xcconfig
+//  DemoVIPER
+//
+//  Created by Vijay  on 17/07/2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "DemoVIPER.xcconfig"
+
+IS_DEBUG_MODE = true
