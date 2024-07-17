@@ -64,6 +64,8 @@
 		917559302C46F4B000D6853D /* DemoVIPER-Dev.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "DemoVIPER-Dev.xcconfig"; sourceTree = "<group>"; };
 		917559342C46F5EF00D6853D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		917559362C46F76200D6853D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		9175593A2C46FEB600D6853D /* Module_A */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Module_A; sourceTree = "<group>"; };
+		9175593B2C46FECE00D6853D /* Module_B */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Module_B; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,8 @@
 		917558F32C46E28D00D6853D /* DemoVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				9175593D2C479CF800D6853D /* Coordinators */,
+				9175593C2C479CEE00D6853D /* Scenes */,
 				917559332C46F5D500D6853D /* Constants */,
 				9175592D2C46F44F00D6853D /* Configuration */,
 				917558F42C46E28D00D6853D /* AppDelegate.swift */,
@@ -148,6 +152,8 @@
 		917559252C46E30D00D6853D /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				9175593B2C46FECE00D6853D /* Module_B */,
+				9175593A2C46FEB600D6853D /* Module_A */,
 				917559292C46E43200D6853D /* UIComponents */,
 				917559282C46E42300D6853D /* Networking */,
 				917559272C46E3A700D6853D /* Core */,
@@ -173,6 +179,28 @@
 				917559362C46F76200D6853D /* AppConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		9175593C2C479CEE00D6853D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9175593D2C479CF800D6853D /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				9175593E2C479D0600D6853D /* Protocols */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		9175593E2C479D0600D6853D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,6 +532,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,6 +561,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
