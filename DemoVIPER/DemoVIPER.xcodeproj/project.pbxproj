@@ -72,6 +72,7 @@
 		9175593B2C46FECE00D6853D /* Module_B */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Module_B; sourceTree = "<group>"; };
 		9175593F2C47C09900D6853D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		917559412C47C0DB00D6853D /* UniversityModuleFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModuleFlow.swift; sourceTree = "<group>"; };
+		917559492C47E2DD00D6853D /* Database */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Database; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +162,7 @@
 		917559252C46E30D00D6853D /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				917559492C47E2DD00D6853D /* Database */,
 				9175593B2C46FECE00D6853D /* Module_B */,
 				9175593A2C46FEB600D6853D /* Module_A */,
 				917559292C46E43200D6853D /* UIComponents */,
