@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import Networking
 /// Defines set of Environment variables that will be used across the app for different Environments. Mainly corresponds to Local Staging/UAT, Production Debug and Production Release.
 enum Environment {
     
@@ -78,4 +78,21 @@ enum Environment {
         
         return displayName
     }()
+}
+
+// To provide the access of font and other resources to the packages
+struct AppConfiguration {
+    public static var shared = AppConfiguration()
+}
+
+// MARK: Create default http headers
+extension AppConfiguration: NetworkManagerDataSource {
+    func enableLogging() -> Bool {
+        return Environment.isDebugMode
+    }
+    
+    func getRequiredDefaultHeaders() -> HTTPHeaders {
+        var headers: HTTPHeaders = [:]
+        return headers
+    }
 }
