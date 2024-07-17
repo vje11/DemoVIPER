@@ -9,6 +9,7 @@
 import UIKit
 import Database
 
+public typealias UniversityListingRefreshActionClosure = ()->Void
 // MARK: Delegate
 public protocol UniversityListingDelegate: AnyObject {
     func didSelectUniversity(model: UniversityDetailProtocol)
@@ -38,6 +39,7 @@ protocol UniversityListingModuleInput: AnyObject {
     var view: UniversityListingViewInput? { get set }
     var interactor: UniversityListingInteractorInput! { get set }
     var router: UniversityListingRouterInput! { get set }
+    var refreshActionClosure: UniversityListingRefreshActionClosure { get set }
 }
 
 // MARK: - Presenter (Interactor to Presenter communication)
@@ -83,4 +85,10 @@ typealias UniversityListTableViewListItem = UniversityListTableViewCellViewModel
 
 struct UniversityListingViewDetails {
     var displayedList: [UniversityListTableViewListItem] = []
+}
+
+
+public struct UniversityListingFunctionReturn {
+    public var refreshActionClosure: UniversityListingRefreshActionClosure
+    public var viewComtroller: UIViewController
 }

@@ -23,4 +23,8 @@ final class UniversityDetailsRouter: UniversityDetailsRouterInput {
     }
 
     // MARK: - UniversityDetailsRouterInput methods
+    
+    func refreshButtonPressed() {
+        delegate?.refreshButtonPressed()
+    }
 }

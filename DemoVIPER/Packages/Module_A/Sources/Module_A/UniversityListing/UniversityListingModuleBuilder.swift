@@ -12,7 +12,7 @@ struct UniversityListingModuleBuilder {
 
     // MARK: - UniversityListingBuilder method
 
-    static func buildModule(delegate: UniversityListingDelegate) -> UniversityListingViewController {
+    static func buildModule(delegate: UniversityListingDelegate) -> UniversityListingFunctionReturn {
         let viewController = UniversityListingViewController()
         let router = UniversityListingRouter(viewController: viewController, delegate: delegate)
         let interactor = UniversityListingInteractor()
@@ -25,6 +25,6 @@ struct UniversityListingModuleBuilder {
         presenter.router = router
         presenter.interactor = interactor
 
-        return viewController
+        return UniversityListingFunctionReturn(refreshActionClosure: presenter.refreshActionClosure, viewComtroller: viewController)
     }
 }

@@ -162,7 +162,7 @@ final class UniversityDetailsViewController: BaseViewController, UniversityDetai
     // MARK: Actions
     @objc
     private func refreshButtonPressed() {
-        
+        presenter?.refreshButtonPressed()
     }
     
     @objc

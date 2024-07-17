@@ -23,6 +23,7 @@ protocol UniversityDetailsViewInput: AnyObject {
 
 protocol UniversityDetailsViewOutput: AnyObject {
     func viewLoaded()
+    func refreshButtonPressed()
 }
 
 // MARK: - Presenter
@@ -47,6 +48,7 @@ protocol UniversityDetailsInteractorInput: AnyObject {
 // MARK: - Router
 
 protocol UniversityDetailsRouterInput: AnyObject {
+    func refreshButtonPressed()
 }
 
 // MARK: Models

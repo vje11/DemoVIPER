@@ -4,7 +4,7 @@
 import UIKit
 
 public struct Module_A {
-    public static func getUniversityListingScene(delegate: UniversityListingDelegate) -> UIViewController {
+    public static func getUniversityListingScene(delegate: UniversityListingDelegate) -> UniversityListingFunctionReturn {
         let viewController = UniversityListingModuleBuilder.buildModule(delegate: delegate)
         return viewController
     }

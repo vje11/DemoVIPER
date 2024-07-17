@@ -33,6 +33,10 @@ extension UniversityDetailsPresenter: UniversityDetailsViewOutput {
     func viewLoaded() {
         view?.displayUniversityDetails(viewModel: UniversityDetailViewModel(universityDetail: self.universityDetail))
     }
+    
+    func refreshButtonPressed() {
+        router?.refreshButtonPressed()
+    }
 }
 
 // MARK: - UniversityDetailsInteractorOutput methods

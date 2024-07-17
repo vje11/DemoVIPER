@@ -11,6 +11,7 @@ import Module_B
 
 final class UniversityModuleFlow: Coordinator {
     var navigationController: UINavigationController?
+    var refreshActionClosure: UniversityListingRefreshActionClosure?
     
     init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
@@ -18,7 +19,8 @@ final class UniversityModuleFlow: Coordinator {
     
     func start() {
         let listing = Module_A.getUniversityListingScene(delegate: self)
-        self.navigationController?.pushViewController(listing, animated: true)
+        refreshActionClosure = listing.refreshActionClosure
+        self.navigationController?.pushViewController(listing.viewComtroller, animated: true)
     }
     
     private func showUniversityDetailsScene(model: UniversityDetailProtocolReference) {
@@ -35,6 +37,6 @@ extension UniversityModuleFlow: UniversityListingDelegate {
 
 extension UniversityModuleFlow: UniversityDetailsDelegate {
     func refreshButtonPressed() {
-        
+        refreshActionClosure?()
     }
 }

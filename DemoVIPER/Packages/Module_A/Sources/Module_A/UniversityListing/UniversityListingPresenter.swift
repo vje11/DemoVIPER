@@ -1,43 +1,51 @@
 //
 //  UniversityListingPresenter.swift
-//  
+//
 //
 //  Created by Vijay  on 17/07/2024.
-//  
+//
 //
 
 import Foundation
 import Database
 
 final class UniversityListingPresenter: UniversityListingModuleInput {
-
+    
     // MARK: - Properties
-
+    
     weak var view: UniversityListingViewInput?
     var router: UniversityListingRouterInput!
     var interactor: UniversityListingInteractorInput!
     
     var universityList = Universities()
     var lastSearchedCountryName: String = "United Arab Emirates"
-
-    // MARK: - Initialization
-
-    init() {
-
+    
+    lazy var refreshActionClosure: UniversityListingRefreshActionClosure = {
+        self.refreshViewDetails()
     }
-
+    
+    // MARK: - Initialization
+    
+    init() {
+        
+    }
+    
     // MARK: - UniversityListingModuleInput methods
 }
 
 // MARK: - UniversityListingViewOutput methods
 
 extension UniversityListingPresenter: UniversityListingViewOutput {
-
+    
     func viewLoaded() {
-
+        
     }
     
     func viewWillAppear() {
+        refreshViewDetails()
+    }
+    
+    func refreshViewDetails() {
         guard !lastSearchedCountryName.isEmpty else { return }
         interactor.getAllListOfUniversities(forCountry: lastSearchedCountryName)
     }
