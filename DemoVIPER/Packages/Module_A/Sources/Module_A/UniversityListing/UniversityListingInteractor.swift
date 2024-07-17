@@ -8,12 +8,14 @@
 
 import Foundation
 import Networking
+import Database
 
 final class UniversityListingInteractor: UniversityListingInteractorInput {
 
     // MARK: - Properties
 
     weak var presenter: UniversityListingInteractorOutput?
+    lazy var databaseService: UniversityRealmDatabaseServices? = UniversityRealmDatabaseServices()
 
     // MARK: - Initialization
 
@@ -37,11 +39,18 @@ final class UniversityListingInteractor: UniversityListingInteractorInput {
             self?.presenter?.hideLoader()
             switch data {
             case .success(let list, _): 
+                self?.databaseService?.save(list ?? [])
                 self?.presenter?.presentUniversityListDetails(universities: list ?? [])
-            case .failure(_):
-                self?.presenter?.showError(type: .dataNotFound)
                 
-            default: break
+            default:
+                self?.databaseService?.fetch(completion: { result in
+                    switch result {
+                    case .success(let list):
+                        self?.presenter?.presentUniversityListDetails(universities: list)
+                    case .failure(_):
+                        self?.presenter?.showError(type: .dataNotFound)
+                    }
+                })
             }
         }
     }

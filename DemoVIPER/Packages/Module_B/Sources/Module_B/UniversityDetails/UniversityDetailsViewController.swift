@@ -153,6 +153,7 @@ final class UniversityDetailsViewController: BaseViewController, UniversityDetai
         lblUniversityState.text = viewModel.stateProvince
         lblUniversityCountry.text = viewModel.country
         lblUniversityCountryCode.text = viewModel.alphaTwoCode
+        textViewUniversityWebPage.superview?.isHidden = viewModel.attributedStringWebPage?.string.isEmpty ?? true
         textViewUniversityWebPage.attributedText = viewModel.attributedStringWebPage
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Database
 
 final class UniversityListingRouter: UniversityListingRouterInput {
 

@@ -18,6 +18,7 @@ let package = Package(
         .package(path: "../UIComponents"),
         .package(path: "../Core"),
         .package(path: "../Networking"),
+        .package(path: "../Database"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -27,7 +28,8 @@ let package = Package(
             dependencies: [
                 "UIComponents",
                 "Core",
-                "Networking"
+                "Networking",
+                "Database"
             ]),
         .testTarget(
             name: "Module_ATests",

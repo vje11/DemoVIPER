@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Networking
+import Database
 
 public protocol UniversityDetailsDelegate: AnyObject {
     func refreshButtonPressed()
@@ -55,7 +55,7 @@ struct UniversityDetailViewModel: UniversityDetailProtocolReference {
     var country: String?
     var alphaTwoCode: String?
     var webPages: [String]?
-    var name: String?
+    var name: String? = ""
     var stateProvince: String?
     var attributedStringWebPage: NSAttributedString?
     

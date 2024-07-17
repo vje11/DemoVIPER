@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Networking
+import Database
 
 // MARK: Delegate
 public protocol UniversityListingDelegate: AnyObject {

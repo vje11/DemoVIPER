@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Database
 
 final class UniversityListingPresenter: UniversityListingModuleInput {
 
