@@ -43,14 +43,14 @@ final class UniversityListingInteractor: UniversityListingInteractorInput {
                 self?.presenter?.presentUniversityListDetails(universities: list ?? [])
                 
             default:
-                self?.databaseService?.fetch(completion: { result in
+                self?.databaseService?.fetch{ result in
                     switch result {
                     case .success(let list):
                         self?.presenter?.presentUniversityListDetails(universities: list)
                     case .failure(_):
                         self?.presenter?.showError(type: .dataNotFound)
                     }
-                })
+                }
             }
         }
     }
